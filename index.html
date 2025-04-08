@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>this is mine portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .resume-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-flow: column;
+
+            width: 100%;
+        }
+
+        .resume-container h1 {
+            font-size: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .resume-box {
+            width: 100%;
+        }
+
+        .resume-box img {
+            width: 60%;
+
+        }
+
+        #resume {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        #resume iframe {
+            height: 30px;
+        }
+
+
+
+        @media(max-width:400px) {
+            #resume1 {
+                font-size: 30px;
+            }
+
+            #resume {
+                width: 100%;
+                height: 16rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+
+            }
+
+            .resume-box img {
+                width: 80%;
+
+            }
+
+        }
+
+        .bar {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            display: none;
+            flex-flow: column;
+
+        }
+
+        @media (max-width:400px) {
+            .bar {
+                display: block;
+            }
+        }
+
+        .bars {
+            display: flex;
+
+            width: 35px;
+            height: 4px;
+            background-color: white;
+            margin: 4px;
+            transition: all 0.5s ease;
+        }
+
+        .bar.active .bars:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar.active .bars:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .bar.active .bars:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .hidden-read {
+            display: none;
+            transition: 0.5s ease;
+        }
+
+        .toshowread {
+            display: block;
+        }
+
+        .readlessshow {
+            display: none;
+        }
+
+        .curs {
+            cursor: pointer;
+        }
+
+        li {
+            margin-top: 10px;
+        }
+        p{
+           text-align:justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Raju</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education/Skill</a>
+
+            <a href="#resume1">Resume</a>
+            <a href="#project">Project</a>
+        </nav>
+        <div class="bar" onclick="activenav()">
+            <span class="bars"></span>
+            <span class="bars"></span>
+            <span class="bars"></span>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, I'm Raju</h1>
+            <h3>Frontend Developer</h3>
+            <p>Welcome to my webpage. I'm a freelancer and part time Frontend Developer, I started coding since 8 months
+                and still I am doing because now It's my passion to do Programming.
+                I alwasys want to do the Creative things.
+            </p>
+            <div class="btn-box">
+                <a href="#" onclick="alert('Call Me 9193999643');">Hire me</a>
+                <a href="#resume1">Resume</a>
+            </div>
+
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com/raju.e.376695" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/rajux_xbhai" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.linkedin.com/in/mr-raju-924890275/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <span class="home-imghover">
+
+        </span>
+    </section>
+
+    <!--                about           -->
+
+    <section class="about-section" id="about">
+        <h1>About <span>Me</span></h1>
+        <div class="about-img">
+            <img src="12343.jpg" alt="">
+            <span class="circle"></span>
+        </div>
+        <div class="about-txt">
+            <h3>Frontend Developer</h3>
+            <p class="p">Hi, My name is Raju of 19, I live in village- Pargawan, Post - Umarsia, Bareilly, UtterPradesh, India. I
+                have completed Iti trade Copa(Computer Operator & Programming Assistent) in 2022 from faridpur, Bareilly
+                .Recently I have completed my Frontend web developer course from AutoCadd Center in RampurGardern,
+                Bareilly.
+                If I talk about MyHobbies. MyHobbies are playing sport like highjump, long jump, doing stunt & watching
+                Hollywood sci-fi movies,learning new things, Riding bikes, editing photo/video. </p>
+            <p class="hidden-read p">For web designing I know 3 language 1. HTML 2. CSS(Bootstrap) 3. JAVASCRIPT(Jquery)
+                and for UI/UX I have learnt FIGMA software to become a Professional web designer. apart from this things
+                I'm going to talk about my family. There are 3 membars in my family Me, My Father and My Mother. My
+                Father is Government Servent in Cantt Bareilly and My Mother is a Housewife and but sometimes she does
+                the Karchobi(It's like designing on ladies cloths).
+                in personality are that I am Puntual and Hardworker for my Duties
+                I have hunger to become a Programmer. I want to be a Hacker in my life.
+
+            </p>
+            <a class="readmorehide curs" onclick="readmore()">Read More..</a>
+            <a class="readlessshow curs" onclick="readless()">Read Less..</a>
+        </div>
+    </section>
+
+    <!--        education       -->
+
+    <section class="education" id="education">
+        <h2 class="heading">My <span>Journey</span></h2>
+
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+
+                <div class="education-box">
+
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> February 2023 - May 2023</div>
+                            <h3>Frontend web desinger - AutoCadd(Rampur Garden, Barelly)</h3>
+                            <p>There I have learnt Web designing to become a Professional Programmer. I have learn HTML,
+                                CSS(Bootstrap) and JAVASCRIPT(Jquery)</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2021-2022</div>
+                            <h3>ITI(Copa) - Government Iti, Faridpur, Bareilly</h3>
+                            <p>Copa (Computer Operator & Programming Assistent) duration is 1 year I have learnt Many
+                                things here now I can use computer software like Ms Office and I learn about web
+                                designing</p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-calendar'></i> 2020-2021</div>
+                            <h3>12th(Intermediate)- R.N.Tagore Inter College Bareilly</h3>
+                            <p>I have completed my 12th class from UP Board and This is school is pretty nice </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="education-column formargin">
+                <h3 class="title">Skill</h3>
+
+                <div class="education-box">
+
+
+                    <div class="education-content">
+                        <div class="content">
+
+                            <h3>Frontend web developer</h3>
+                            <p>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>BOOTSTRAP</li>
+                                <li>JQUERY</li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-content">
+                        <div class="content">
+
+                            <h3>Skill</h3>
+                            <p>
+                                <li>MS OFFICE</li>
+                                <li>Typing - Hindi, English</li>
+
+                                <li>Language - Hindi, English, Bangali </li>
+                                <li>Some knowledge in Photo/video editing</li>
+
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="resume-container">
+        <h1 id="resume1">R<span style="padding-left:0;">esume</span></h1>
+        <div class="resume-box">
+
+            <!-- <iframe id="resume"  src="portfolio_resume.pdf" frameborder="0"></iframe> -->
+            <img src="resumepic.jpeg" alt="Resume">
+            <div id="resume"> To Download pdf click the button -
+                <iframe src="Resume.pdf" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!--                     project              -->
+
+    <section class="project" id="project">
+        <h1><span>P</span> roject</h1>
+        <div class="project-box">
+           
+            <li>Construction WebPage Project - <a href="https://bazuhairproject1.netlify.app/" target="_blank">check it out</a>
+            </li>
+            <li>Calculator Project - <a href="https://its-mine-calculator.netlify.app/" target="_blank">check it out</a>
+            </li>
+            <li>Js Projects(6-7 project) - <a href="https://its-raju-me.netlify.app" target="_blank">Check it out</a>
+            </li>
+            <li>Bareilly Temples(Only for pc) - <a href="https://blyproject.netlify.app" target="_blank">Check it out</a>
+            </li>
+            <li>Food Delivery Project - <a href="https://its-me-raju-bhai.netlify.app" target="_blank">Check it out</a>
+            </li>
+
+        </div>
+    </section>
+    <div>
+        <marquee style="background:white;color:red;font-weight: bold;">Thanks for Visiting</marquee>
+    </div>
+    <script>
+        let x = document.querySelector('.navbar');
+        let y = document.querySelector('.bar');
+        function activenav() {
+            x.classList.toggle('act');
+            y.classList.toggle('active');
+        }
+        function readmore() {
+            let readmore = document.querySelector('.hidden-read');
+            readmore.classList.add('toshowread');
+            let readmorehide = document.querySelector('.readmorehide');
+            readmorehide.style.display = 'none';
+
+            let readless = document.querySelector('.readlessshow');
+            readless.style.display = 'block';
+
+
+        }
+        function readless() {
+            let readmore = document.querySelector('.hidden-read');
+            readmore.classList.remove('toshowread');
+
+            let readless = document.querySelector('.readlessshow');
+            readless.style.display = 'none';
+
+            let readmorehide = document.querySelector('.readmorehide');
+            readmorehide.style.display = 'block';
+
+        }
+
+    </script>
+</body>
+
+</html>
